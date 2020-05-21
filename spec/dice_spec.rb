@@ -7,4 +7,9 @@ describe Dice do
   it 'responds to a roll method' do
     expect(dice).to respond_to(:roll)
   end
+  context 'roll method' do
+    it 'return a number between 1 and 6' do
+      expect(dice.roll).to be_between(1,6)
+    end
+  end
 end
